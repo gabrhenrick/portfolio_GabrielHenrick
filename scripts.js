@@ -122,3 +122,48 @@ const animateNumbers = () => {
   scrollTopBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+  // Envio de e-mail
+  document.addEventListener('DOMContentLoaded', function() {
+    // Seleciona o formulário e o elemento de status
+    var form = document.getElementById('contact-form');
+    var status = document.getElementById('form-status');
+
+    // Função para lidar com o envio do formulário
+    async function handleSubmit(event) {
+        event.preventDefault(); // Impede o recarregamento da página
+        var data = new FormData(event.target);
+
+        fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                // Sucesso no envio
+                status.innerHTML = "Obrigado! Sua mensagem foi enviada.";
+                status.style.color = "#00e676"; // Um verde para sucesso
+                form.reset(); // Limpa o formulário
+            } else {
+                // Se o servidor responder com um erro
+                response.json().then(data => {
+                    if (Object.hasOwn(data, 'errors')) {
+                        status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                    } else {
+                        status.innerHTML = "Oops! Ocorreu um problema ao enviar seu formulário.";
+                    }
+                    status.style.color = "#ff5252"; // Um vermelho para erro
+                })
+            }
+        }).catch(error => {
+            // Erro de rede ou outro problema
+            status.innerHTML = "Oops! Ocorreu um problema ao enviar seu formulário.";
+            status.style.color = "#ff5252"; // Um vermelho para erro
+        });
+    }
+
+    // Adiciona o "escutador" de evento ao formulário
+    form.addEventListener("submit", handleSubmit);
+});
