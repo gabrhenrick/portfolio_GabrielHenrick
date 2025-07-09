@@ -1,68 +1,53 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // --- Configuração do Particles.js ---
-  if (document.getElementById("particles-js")) {
-    particlesJS("particles-js", {
-      particles: {
-        number: { value: 60, density: { enable: true, value_area: 800 } },
-        color: { value: "#2a2a2a" },
-        shape: { type: "circle" },
-        opacity: { value: 0.5, random: false },
-        size: { value: 3, random: true },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: "#2a2a2a",
-          opacity: 0.4,
-          width: 1,
-        },
-        move: {
-          enable: true,
-          speed: 1,
-          direction: "none",
-          random: false,
-          straight: false,
-          out_mode: "out",
-        },
-      },
-      interactivity: {
-        detect_on: "canvas",
-        events: {
-          onhover: { enable: true, mode: "grab" },
-          onclick: { enable: true, mode: "push" },
-          resize: true,
-        },
-        modes: {
-          grab: { distance: 140, line_linked: { opacity: 1 } },
-          push: { particles_nb: 4 },
-        },
-      },
-      retina_detect: true,
-    });
-  }
+// --- Painel de Animação de Números ---
+const animateNumbers = () => {
+  const counters = document.querySelectorAll('.stat-number');
+  
+  // Opções para o observer
+  const observerOptions = {
+    root: null, // Observa em relação à viewport
+    rootMargin: '0px',
+    threshold: 0.4 // Dispara quando 40% do elemento estiver visível
+  };
 
-  // --- Lógica para Cursor Personalizado ---
-  const cursorDot = document.querySelector(".custom-cursor-dot");
-  const cursorOutline = document.querySelector(".custom-cursor-outline");
-  if (window.matchMedia("(min-width: 1025px)").matches) {
-    const hoverables = document.querySelectorAll(
-      "a, button, .project-card, .timeline-item, input, textarea, .filter-btn"
-    );
-    window.addEventListener("mousemove", (e) => {
-      const { clientX: x, clientY: y } = e;
-      cursorDot.style.left = `${x}px`;
-      cursorDot.style.top = `${y}px`;
-      cursorOutline.style.left = `${x}px`;
-      cursorOutline.style.top = `${y}px`;
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      const counter = entry.target;
+      
+      // Se o elemento ESTÁ visível na tela
+      if (entry.isIntersecting) {
+        const target = +counter.getAttribute('data-target');
+        counter.innerText = '0+'; // Garante que a contagem sempre comece do zero
+
+        let count = 0;
+        const speed = 150; // Ajuste a velocidade se desejar (maior = mais lento)
+        const increment = target / speed;
+
+        const updateCount = () => {
+          if (count < target) {
+            count += increment;
+            counter.innerText = Math.ceil(count) + '+';
+            setTimeout(updateCount, 10); // Intervalo da animação
+          } else {
+            counter.innerText = target + '+'; // Garante o valor final exato
+          }
+        };
+
+        updateCount();
+        
+      } else {
+        // Se o elemento NÃO ESTÁ mais visível, reseta o contador
+        counter.innerText = '0+';
+      }
     });
-    hoverables.forEach((el) => {
-      el.addEventListener("mouseenter", () =>
-        cursorOutline.classList.add("hover")
-      );
-      el.addEventListener("mouseleave", () =>
-        cursorOutline.classList.remove("hover")
-      );
-    });
-  }
+  }, observerOptions);
+
+  counters.forEach(counter => {
+    observer.observe(counter);
+  });
+};
+
+  // Chama a função para iniciar a observação
+  animateNumbers();
 
   // --- Lógica para Menu Mobile ---
   const navToggle = document.getElementById("nav-toggle");
@@ -137,4 +122,3 @@ document.addEventListener("DOMContentLoaded", () => {
   scrollTopBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
-});
