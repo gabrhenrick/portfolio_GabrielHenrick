@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((response) => {
         if (response.ok) {
           status.innerHTML = "Obrigado! Sua mensagem foi enviada.";
-          status.style.color = "#00e676";
+          status.style.color = "#6a40e4";
           form.reset();
         } else {
           response.json().then((data) => {
