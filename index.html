@@ -3,49 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gabriel Henrick</title>
+    <title>Gabriel Henrick | Arquiteto de Ecossistemas de Dados</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="favicon-32x32.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="custom-cursor-dot"></div>
     <div class="custom-cursor-outline"></div>
+
     <header class="header">
       <nav class="navbar container">
-        <a href="#home" class="nav-logo">GH</a>
+        <a href="#home" class="nav-logo">[GH]</a>
         <ul class="nav-menu" id="nav-menu">
           <li class="nav-item"><a href="#home" class="nav-link">Início</a></li>
-          <li class="nav-item"><a href="#projects" class="nav-link">Projetos</a></li>
-          <li class="nav-item"><a href="#academic" class="nav-link">Formação</a></li>
-          <li class="nav-item"><a href="#certifications" class="nav-link">Certificações</a></li>
-          <li class="nav-item"><a href="#experience" class="nav-link">Jornada</a></li>
-          <li class="nav-item"><a href="#contact" class="nav-link">Contato</a></li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">Projetos</a>
+          </li>
+          <li class="nav-item">
+            <a href="#academic" class="nav-link">Formação</a>
+          </li>
+          <li class="nav-item">
+            <a href="#certifications" class="nav-link">Certificações</a>
+          </li>
+          <li class="nav-item">
+            <a href="#experience" class="nav-link">Jornada</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contato</a>
+          </li>
         </ul>
-        <button class="nav-toggle" id="nav-toggle">
-          <i class="fas fa-bars"></i>
-        </button>
+        <div class="nav-controls">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-sun"></i>
+          </button>
+          <button class="nav-toggle" id="nav-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
       </nav>
     </header>
 
     <main>
-      <!-- Página Inicial -->
-        <section id="home">
+      <section id="home">
         <div class="home-wrapper container">
           <div class="home-text-content">
             <h1>Gabriel Henrick</h1>
-            <strong><p class="subtitle">
-              Arquiteto de <span>Ecossistemas de Dados</span>
-            </p></strong>
-            <p class="descriptionInicial">Eu não apenas analiso negócios; eu enxergo suas engrenagens ocultas. Minha especialidade é encontrar as lacunas de mercado, os processos ineficientes e os ativos de dados subutilizados que separam sua empresa ou você do próximo nível de crescimento. Eu transformo complexidade em um roadmap claro e dados brutos no motor da sua vantagem competitiva.
+            <h2 class="subtitle">
+              <span class="static-text">Arquiteto de</span>
+              <span class="dynamic-text-wrapper">
+                <span class="dynamic-text">Ecossistemas de Dados</span>
+                <span class="dynamic-text">Business Intelligence</span>
+                <span class="dynamic-text">Soluções em Power BI</span>
+              </span>
+            </h2>
+            <p class="descriptionInicial">
+              Eu não apenas analiso negócios; eu enxergo suas engrenagens
+              ocultas. Minha especialidade é encontrar as lacunas de mercado e os
+              dados subutilizados que separam sua empresa do próximo nível de
+              crescimento.
             </p>
-            <a href="#projects">Explore as soluções que eu construo!</a>
+            <a href="#projects" class="cta-button"
+              >Explore as soluções que eu construo!</a
+            >
           </div>
 
-          <!-- Painel de Números -->
           <div class="stats-panel">
             <h2>Nossos Números</h2>
             <div class="stats-grid">
@@ -70,250 +104,276 @@
         </div>
       </section>
 
-      <!-- Projetos -->
-      <section id="projects" class="container">
-        <!-- Título da sessão -->
-        <h2>Portfólio de Projetos</h2>
-        <!-- Filtros -->
-        <div class="project-filters">
-          <button class="filter-btn active" data-filter="all">Todos</button>
-          <button class="filter-btn" data-filter="Power BI">Power BI</button>
-          <button class="filter-btn" data-filter="Portfolio">Portfolio</button>
+      <section id="projects" class="container-fluid">
+        <div class="container section-title">
+          <h2>Portfólio de Projetos</h2>
+          <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="Power BI">Power BI</button>
+            <button class="filter-btn" data-filter="Portfolio">Portfolio</button>
+          </div>
         </div>
 
-        <!-- Galeria de projetos -->
-        <div class="project-gallery">
-
-            <!-- Projeto: Power BI | Varejo de Bebidas -->
-          <article class="project-card" data-category="Power BI">
-            <!-- Imagem do Projeto -->
-            <img src="img/GestaoDestilaria.png" alt="Varejo de Bebidas" class="project-image"/>
-            <!-- Conteúdo do Projeto -->
-            <div class="project-content">
-            <!-- Tecnologias Utilizadas -->
-              <div class="project-tags">
-                <span class="project-tag">Power BI</span>
-                <span class="project-tag">Excel</span>
-                <span class="project-tag">ETL</span>
-                <span class="project-tag">DAX</span>
-                <span class="project-tag">Storytelling</span>
-              </div>
-            <!-- Título do Projeto -->
-              <h3>Power BI | Varejo de Bebidas</h3>
-              <!-- Descrição Rápida do Projeto -->
-              <p class="project-description">Um estudo de caso sobre como transformar dados de vendas complexos em um centro de comando para o varejo. Através de storytelling interativo, análise de rentabilidade e um design centrado no usuário (com temas light/dark), este projeto prova que a inteligência de dados bem aplicada é o motor do crescimento e da lucratividade do negócio.</p>
-                <!-- Descrição Detalhada do Projeto -->
-              <div class="project-details">
-                <p>A estratégia foi armar o gestor com uma ferramenta de descoberta, transformando a análise de um relatório passivo em uma investigação ativa. O painel foi arquitetado não para exibir KPIs estáticos, mas para criar um diálogo com os dados, permitindo identificar a performance de cada produto, otimizar o mix de vendas e responder a perguntas de negócio em tempo real. Trata-se de converter o analista de um observador em um estrategista proativo.</p>
-              </div>
-              <!-- Links Externos do Projeto -->
-              <div class="project-links">
-                <button class="expand-btn">Ver mais<i class="fas fa-chevron-down"></i></button>
-                <div class="external-links">
-                  <a href="https://app.powerbi.com/view?r=eyJrIjoiOWE3MmRmOTAtZWY1Ni00ZGNjLTlhOGUtNDk3ZWE3MzIxYTNmIiwidCI6ImMwNTllNTZmLTUyMGUtNDk4ZS05NzNlLTU0NmQ1NWQ5OTM3MSJ9" target="_blank" class="project-link" title="Clique aqui para acessar o projeto!">
-                    <i class="fas fa-chart-bar"></i></a>
+        <div class="scroll-wrapper">
+          <div class="project-gallery">
+            <article class="project-card" data-category="Power BI">
+              <img
+                src="img/GestaoDestilaria.png"
+                alt="Varejo de Bebidas"
+                class="project-image"
+              />
+              <div class="project-content">
+                <div class="project-tags">
+                  <span class="project-tag">Power BI</span>
+                  <span class="project-tag">Excel</span>
+                  <span class="project-tag">ETL</span>
+                </div>
+                <h3>Power BI | Varejo de Bebidas</h3>
+                <p class="project-description">
+                  Um estudo de caso sobre como transformar dados de vendas
+                  complexos em um centro de comando para o varejo.
+                </p>
+                <div class="project-links">
+                  <div class="external-links">
+                    <a
+                      href="https://app.powerbi.com/view?r=eyJrIjoiOWE3MmRmOTAtZWY1Ni00ZGNjLTlhOGUtNDk3ZWE3MzIxYTNmIiwidCI6ImMwNTllNTZmLTUyMGUtNDk4ZS05NzNlLTU0NmQ1NWQ5OTM3MSJ9"
+                      target="_blank"
+                      class="project-link"
+                      title="Clique aqui para acessar o projeto!"
+                    >
+                      <i class="fas fa-chart-bar"></i> Ver Projeto
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </article>
+            </article>
 
-            <!-- Projeto: Power BI | Finanças Pessoais -->
-          <article class="project-card" data-category="Power BI">
-            <!-- Imagem do Projeto -->
-            <img src="img/GestaoFinanceiraPessoal.png" alt="Finanças Pessoais" class="project-image"/>
-            <!-- Conteúdo do Projeto -->
-            <div class="project-content">
-            <!-- Tecnologias Utilizadas -->
-              <div class="project-tags">
-                <span class="project-tag">Power BI</span>
-                <span class="project-tag">Excel</span>
-                <span class="project-tag">Storytelling</span>
-              </div>
-            <!-- Título do Projeto -->
-              <h3>Power BI | Finanças Pessoais</h3>
-              <!-- Descrição Rápida do Projeto -->
-              <p class="project-description">Um estudo de caso sobre como transformar dados financeiros caóticos em um painel de controle para a vida. Usando storytelling visual, filtros dinâmicos e tooltips inteligentes, este projeto demonstra como a clareza impulsiona o controle e a otimização de recursos. É a prova de que dados bem apresentados são o alicerce da decisão inteligente.</p>
-                <!-- Descrição Detalhada do Projeto -->
-              <div class="project-details">
-                <p>A estratégia foi capacitar o usuário a conduzir sua própria investigação, transformando a análise de passiva para ativa. O painel foi arquitetado não para exibir números, mas para responder perguntas, revelando os padrões que permitem o planejamento e a prosperidade.</p>
-              </div>
-              <!-- Links Externos do Projeto -->
-              <div class="project-links">
-                <button class="expand-btn">Ver mais<i class="fas fa-chevron-down"></i></button>
-                <div class="external-links">
-                  <a href="https://app.powerbi.com/view?r=eyJrIjoiNGU2MDQ5MjMtMzRmMS00OTZjLWIwNWYtOWU1ZmZiZTNmNTdmIiwidCI6ImMwNTllNTZmLTUyMGUtNDk4ZS05NzNlLTU0NmQ1NWQ5OTM3MSJ9" target="_blank" class="project-link" title="Clique aqui para acessar o projeto!">
-                    <i class="fas fa-chart-bar"></i></a>
+            <article class="project-card" data-category="Power BI">
+              <img
+                src="img/GestaoFinanceiraPessoal.png"
+                alt="Finanças Pessoais"
+                class="project-image"
+              />
+              <div class="project-content">
+                <div class="project-tags">
+                  <span class="project-tag">Power BI</span>
+                  <span class="project-tag">Storytelling</span>
+                </div>
+                <h3>Power BI | Finanças Pessoais</h3>
+                <p class="project-description">
+                  Como transformar dados financeiros caóticos em um painel de
+                  controle para a vida, impulsionando a otimização de recursos.
+                </p>
+                <div class="project-links">
+                  <div class="external-links">
+                    <a
+                      href="https://app.powerbi.com/view?r=eyJrIjoiNGU2MDQ5MjMtMzRmMS00OTZjLWIwNWYtOWU1ZmZiZTNmNTdmIiwidCI6ImMwNTllNTZmLTUyMGUtNDk4ZS05NzNlLTU0NmQ1NWQ5OTM3MSJ9"
+                      target="_blank"
+                      class="project-link"
+                      title="Clique aqui para acessar o projeto!"
+                    >
+                      <i class="fas fa-chart-bar"></i> Ver Projeto
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </article>
+            </article>
 
-          <!-- Projeto: Portfolio | JR Cronogramas -->
-          <article class="project-card" data-category="Portfolio">
-            <!-- Imagem do Projeto -->
-            <img src="img/JordanaLinknaBio.png" alt="Análise de Investimentos" class="project-image"/>
-            <!-- Conteúdo do Projeto -->
-            <div class="project-content">
-            <!-- Tecnologias Utilizadas -->
-              <div class="project-tags">
-                <span class="project-tag">HTML</span>
-                <span class="project-tag">CSS</span>
-              </div>
-            <!-- Título do Projeto -->
-              <h3>Portfolio | JR Cronogramas</h3>
-              <!-- Descrição Rápida do Projeto -->
-              <p class="project-description">A construção de um hub digital de conversão para a marca JR Cronogramas. Este projeto eleva o "link na bio" a um ativo estratégico, projetado para transformar seguidores do Instagram em clientes e aumentar a credibilidade da marca.</p>
-                <!-- Descrição Detalhada do Projeto -->
-              <div class="project-details">
-                <p>O princípio foi mover a marca de um "terreno alugado" (Instagram) para um "terreno próprio". Ao centralizar a jornada do cliente em uma plataforma controlada, criamos um funil de vendas mensurável e blindamos o negócio contra a volatilidade dos algoritmos.</p>
-              </div>
-              <!-- Links Externos do Projeto -->
-              <div class="project-links">
-                <button class="expand-btn">Ver mais<i class="fas fa-chevron-down"></i></button>
-                <div class="external-links">
-                  <a href="https://jordana-linknabio.vercel.app/" target="_blank" class="project-link" title="Clique aqui para acessar o projeto!">
-                    <i class="fas fa-chart-bar"></i></a>
+            <article class="project-card" data-category="Portfolio">
+              <img
+                src="img/JordanaLinknaBio.png"
+                alt="Análise de Investimentos"
+                class="project-image"
+              />
+              <div class="project-content">
+                <div class="project-tags">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                </div>
+                <h3>Portfolio | JR Cronogramas</h3>
+                <p class="project-description">
+                  Construção de um hub digital "link na bio" como ativo
+                  estratégico para transformar seguidores em clientes.
+                </p>
+                <div class="project-links">
+                  <div class="external-links">
+                    <a
+                      href="https://jordana-linknabio.vercel.app/"
+                      target="_blank"
+                      class="project-link"
+                      title="Clique aqui para acessar o projeto!"
+                    >
+                      <i class="fas fa-chart-bar"></i> Ver Projeto
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </article>
+            </article>
 
-          <!-- Projeto: Portfolio | Gabriel Henrick -->
-          <article class="project-card" data-category="Portfolio">
-            <!-- Imagem do Projeto -->
-            <img src="img/PortfolioPessoal.png" alt="Portfolio Pessoal" class="project-image"/>
-            <!-- Conteúdo do Projeto -->
-            <div class="project-content">
-            <!-- Tecnologias Utilizadas -->
-              <div class="project-tags">
-                <span class="project-tag">HTML</span>
-                <span class="project-tag">CSS</span>
-                <span class="project-tag">JS</span>
-              </div>
-            <!-- Título do Projeto -->
-              <h3>Portfolio | Gabriel Henrick</h3>
-              <!-- Descrição Rápida do Projeto -->
-              <p class="project-description">O desenvolvimento da minha própria plataforma de marca, um hub estratégico para clientes, alunos e recrutadores. Este site é a materialização da minha filosofia: usar clareza, design e estratégia para construir sistemas que geram oportunidades.</p>
-                <!-- Descrição Detalhada do Projeto -->
-              <div class="project-details">
-                <p>A arquitetura deste site foi desenhada para uma comunicação multifacetada. Cada elemento foi calibrado para ressoar com um público específico, permitindo que clientes, alunos e recrutadores encontrem o valor que buscam em um sistema projetado para converter.</p>
-              </div>
-              <!-- Links Externos do Projeto -->
-              <div class="project-links">
-                <button class="expand-btn">Ver mais<i class="fas fa-chevron-down"></i></button>
-                <div class="external-links">
-                  <a href="https://portfolio-gabriel-henrick.vercel.app/" target="_blank" class="project-link" title="Clique aqui para acessar o projeto!">
-                    <i class="fas fa-chart-bar"></i></a>
-                  <a href="https://github.com/gabrhenrick/portfolio_GabrielHenrick" target="_blank" class="project-link" title="GitHub"><i class="fab fa-github"></i></a>
+            <article class="project-card" data-category="Portfolio">
+              <img
+                src="img/PortfolioPessoal.png"
+                alt="Portfolio Pessoal"
+                class="project-image"
+              />
+              <div class="project-content">
+                <div class="project-tags">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JS</span>
+                </div>
+                <h3>Portfolio | Gabriel Henrick</h3>
+                <p class="project-description">
+                  O desenvolvimento da minha própria plataforma de marca, um hub
+                  estratégico para clientes, alunos e recrutadores.
+                </p>
+                <div class="project-links">
+                  <div class="external-links">
+                    <a
+                      href="https://portfolio-gabriel-henrick.vercel.app/"
+                      target="_blank"
+                      class="project-link"
+                      title="Clique aqui para acessar o projeto!"
+                    >
+                      <i class="fas fa-chart-bar"></i> Ver Projeto
+                    </a>
+                    <a
+                      href="https://github.com/gabrhenrick/portfolio_GabrielHenrick"
+                      target="_blank"
+                      class="project-link"
+                      title="GitHub"
+                      ><i class="fab fa-github"></i> Código</a
+                    >
+                  </div>
                 </div>
               </div>
-            </div>
-          </article>
+            </article>
 
+            </div>
+          <div class="scroll-prompt">
+            <i class="fas fa-arrows-left-right"></i> Arraste para ver mais
+          </div>
         </div>
       </section>
-      
-      <!-- Experiências Acadêmicas -->
+
       <section id="academic" class="container">
-        <!-- Título da Sessão -->
         <h2>Jornada Acadêmica</h2>
-        <!-- Formação 1 -->
         <div class="timeline">
           <div class="timeline-item">
             <div class="timeline-content">
-              <p class="timeline-date">2021/2 - Presente (9/10) </p>
+              <p class="timeline-date">2021/2 - Presente (9/10)</p>
               <h3><i id="iconAcademic" class="fas fa-seedling"></i> Agronomia</h3>
               <p>FACEG - Faculdade Evangélica de Goianésia</p>
             </div>
           </div>
-          <!-- Formação 2 -->
           <div class="timeline-item">
             <div class="timeline-content">
-              <p class="timeline-date">2023/1 - Presente (6/8) </p>
-              <h3><i id="iconAcademic" class="fas fa-code"></i> Engenharia de Software</h3>
+              <p class="timeline-date">2023/1 - Presente (6/8)</p>
+              <h3>
+                <i id="iconAcademic" class="fas fa-code"></i> Engenharia de Software
+              </h3>
               <p>ESTACIO - Universidade Estácio de Sá</p>
             </div>
-          </div>
-      </section>
-    
-      <!-- Certificações e Competências -->
-      <section id="certifications" class="container">
-        <h2>Certificações e Competências</h2>
-        <div class="certifications-grid">
-          <div class="cert-card">
-            <div class="icon"><i class="fas fa-award"></i></div>
-            <h3>Formação em Analista de Dados</h3>
-            <p>Reconhecido pelo MEC</p>
-            <a href="https://drive.google.com/file/d/1tVCmBlGcPJ9mGLQrrVZW-d_wS9f5hUF3/view?usp=sharing" target="_blank">visualizar certificado</a>
-          </div>
-          <div class="cert-card">
-            <div class="icon"><i class="fas fa-chart-line"></i></div>
-            <h3>Estatística para Análise de Dados</h3>
-            <p>Certificação Profissional</p>
-            <a href="https://drive.google.com/file/d/11-WZ06DXhWU_V_YNQ9KqMMZqqUW0nIHk/view?usp=sharing" target="_blank">visualizar certificado</a>
-          </div>
-          <div class="cert-card">
-            <div class="icon"><i class="fas fa-paint-brush"></i></div>
-            <h3>Storytelling e Visualização de Dados</h3>
-            <p>Certificação Profissional</p>
-            <a href="https://drive.google.com/file/d/1GEOZ1bgEWVly2vG8BlY4A-JtgAdFY1U9/view?usp=sharing" target="_blank">visualizar certificado</a>
-          </div>
-          <div class="cert-card">
-            <div class="icon"><i class="fas fa-chart-bar"></i></div>
-            <h3>Power BI Avançado</h3>
-            <p>Certificação Profissional</p>
-            <a href="https://drive.google.com/drive/folders/17eL_BPDdliDZLaJyBhzis8GuLOWmbE-r?usp=sharing" target="_blank">visualizar certificado</a>
-          </div>
-          <div class="cert-card">
-            <div class="icon"><i class="fas fa-file-excel"></i></div>
-            <h3>Excel Avançado</h3>
-            <p>Certificação Profissional</p>
-            <a style="color: rgb(252, 123, 123)">link do curso em breve</a>
-          </div>
-          <div class="cert-card">
-            <div class="icon"><i class="fa-brands fa-figma"></i></div>
-            <h3>Design de Dashboards com Figma</h3>
-            <p>Certificação Profissional</p>
-            <a href="https://drive.google.com/file/d/1dEpDMI_O8Mei21yeHyKh8gJHKqFpTRvQ/view?usp=drive_link" target="_blank">visualizar certificado</a>
-          </div>
-          <div class="cert-card">
-            <div class="icon"><i class="fas fa-database"></i></div>
-            <h3>SQL Básico</h3>
-            <p>Certificação Profissional</p>
-            <a href="https://drive.google.com/drive/folders/14xl3YzenY2jH1fbKv4Fo38PzhgnBq21M?usp=sharing" target="_blank">visualizar certificado</a>
-          </div>
-          <div class="cert-card">
-            <div class="icon"><i class="fa-solid fa-server"></i></div>
-            <h3>Trabalhando com Grandes Bases Corporativas</h3>
-            <p>Certificação Profissional</p>
-            <a href="https://drive.google.com/file/d/1vMyaoSkMm5CLRJsibcSsaM2b6yfFeOSr/view?usp=drive_link" target="_blank">visualizar certificado</a>
-          </div>
-          <div class="cert-card">
-            <div class="icon"><i class="fas fa-brain"></i></div>
-            <h3>Lógica de Programação e Raciocínio</h3>
-            <p>Certificação Profissional</p>
-            <a href="https://drive.google.com/file/d/1RoWmlI_CpYdAXaafsLkHwxNcag_n6W5m/view?usp=sharing" target="_blank">visualizar certificado</a>
-          </div>
-          <div class="cert-card">
-            <div class="icon"><i class="fas fa-seedling"></i></div>
-            <h3>Crédito Rural</h3>
-            <p>Certificação Profissional</p>
-            <a href="https://drive.google.com/file/d/1A3if4PcYShwOjamT9f3DqejJNZ5MVWqI/view?usp=sharing" target="_blank">visualizar certificado</a>
-          </div>
-          <div class="cert-card">
-            <div class="icon"><i class="fa-solid fa-mug-hot"></i></div>
-            <h3>Prospecção de Clientes</h3>
-            <p>Certificação Mentoria</p>
-            <a href="https://drive.google.com/file/d/1EbQphY6lhW4iBJQiJq6Xqp1s4qQRQ9tH/view?usp=sharing" target="_blank">visualizar certificado</a>
           </div>
         </div>
       </section>
 
-            <!-- Experiências Profissionais -->
+      <section id="certifications" class="container-fluid">
+        <div class="container section-title">
+          <h2>Certificações e Competências</h2>
+        </div>
+
+        <div class="scroll-wrapper">
+          <div class="certifications-grid">
+            <div class="cert-card">
+              <div class="icon"><i class="fas fa-award"></i></div>
+              <h3>Formação em Analista de Dados</h3>
+              <p>Reconhecido pelo MEC</p>
+              <a
+                href="https://drive.google.com/file/d/1tVCmBlGcPJ9mGLQrrVZW-d_wS9f5hUF3/view?usp=sharing"
+                target="_blank"
+                >visualizar certificado</a
+              >
+            </div>
+            <div class="cert-card">
+              <div class="icon"><i class="fas fa-chart-line"></i></div>
+              <h3>Estatística para Análise de Dados</h3>
+              <p>Certificação Profissional</p>
+              <a
+                href="https://drive.google.com/file/d/11-WZ06DXhWU_V_YNQ9KqMMZqqUW0nIHk/view?usp=sharing"
+                target="_blank"
+                >visualizar certificado</a
+              >
+            </div>
+            <div class="cert-card">
+              <div class="icon"><i class="fas fa-paint-brush"></i></div>
+              <h3>Storytelling e Visualização de Dados</h3>
+              <p>Certificação Profissional</p>
+              <a
+                href="https://drive.google.com/file/d/1GEOZ1bgEWVly2vG8BlY4A-JtgAdFY1U9/view?usp=sharing"
+                target="_blank"
+                >visualizar certificado</a
+              >
+            </div>
+            <div class="cert-card">
+              <div class="icon"><i class="fas fa-chart-bar"></i></div>
+              <h3>Power BI Avançado</h3>
+              <p>Certificação Profissional</p>
+              <a
+                href="https://drive.google.com/drive/folders/17eL_BPDdliDZLaJyBhzis8GuLOWmbE-r?usp=sharing"
+                target="_blank"
+                >visualizar certificado</a
+              >
+            </div>
+            <div class="cert-card">
+              <div class="icon"><i class="fa-brands fa-figma"></i></div>
+              <h3>Design de Dashboards com Figma</h3>
+              <p>Certificação Profissional</p>
+              <a
+                href="https://drive.google.com/file/d/1dEpDMI_O8Mei21yeHyKh8gJHKqFpTRvQ/view?usp=drive_link"
+                target="_blank"
+                >visualizar certificado</a
+              >
+            </div>
+            <div class="cert-card">
+              <div class="icon"><i class="fas fa-database"></i></div>
+              <h3>SQL Básico</h3>
+              <p>Certificação Profissional</p>
+              <a
+                href="https://drive.google.com/drive/folders/14xl3YzenY2jH1fbKv4Fo38PzhgnBq21M?usp=sharing"
+                target="_blank"
+                >visualizar certificado</a
+              >
+            </div>
+            <div class="cert-card">
+              <div class="icon"><i class="fa-solid fa-server"></i></div>
+              <h3>Trabalhando com Grandes Bases Corporativas</h3>
+              <p>Certificação Profissional</p>
+              <a
+                href="https://drive.google.com/file/d/1vMyaoSkMm5CLRJsibcSsaM2b6yfFeOSr/view?usp=drive_link"
+                target="_blank"
+                >visualizar certificado</a
+              >
+            </div>
+            <div class="cert-card">
+              <div class="icon"><i class="fas fa-brain"></i></div>
+              <h3>Lógica de Programação e Raciocínio</h3>
+              <p>Certificação Profissional</p>
+              <a
+                href="https://drive.google.com/file/d/1RoWmlI_CpYdAXaafsLkHwxNcag_n6W5m/view?usp=sharing"
+                target="_blank"
+                >visualizar certificado</a
+              >
+            </div>
+            </div>
+          <div class="scroll-prompt">
+            <i class="fas fa-arrows-left-right"></i> Arraste para ver mais
+          </div>
+        </div>
+      </section>
+
       <section id="experience" class="container">
-        <!-- Título da Sessão -->
         <h2>Jornada Profissional</h2>
-        <!-- Lista de Experiências Profissionais -->
         <div class="timeline">
           <div class="timeline-item">
             <div class="timeline-content">
@@ -346,46 +406,76 @@
         </div>
       </section>
 
-      <!-- Contato -->
       <section id="contact" class="container">
-          <div class="contact-content">
-              <h2>Vamos Criar Valor Juntos?</h2>
-              <p> Toda grande transformação começa com uma conversa. Se você tem um desafio complexo, uma oportunidade inexplorada ou a ambição de construir uma vantagem competitiva real, este é o ponto de partida.
-              </p>
-              
-              <form id="contact-form" action="https://formspree.io/f/mqabvvwa" method="POST">
-                  <div class="form-group">
-                      <input type="text" id="name" name="name" placeholder="Seu nome" required/>
-                  </div>
-                  <div class="form-group">
-                      <input type="email" id="email" name="email" placeholder="Seu melhor e-mail" required/>
-                  </div>
-                  <div class="form-group">
-                      <textarea id="message" name="message" rows="5" placeholder="Sua mensagem" required></textarea>
-                  </div>
-                  <button type="submit" class="submit-btn">Enviar</button>
-              </form>
+        <div class="contact-content">
+          <h2>Vamos Criar Valor Juntos?</h2>
+          <p>
+            Toda grande transformação começa com uma conversa. Se você tem um
+            desafio complexo ou a ambição de construir uma vantagem competitiva
+            real, este é o ponto de partida.
+          </p>
 
-              <div id="form-status" style="margin-top: 15px;"></div>
-              
-              <div class="contact-social-links">
-                  </div>
-          </div>
+          <form id="contact-form" action="https://formspree.io/f/mqabvvwa" method="POST">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Seu nome" required />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Seu melhor e-mail"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Sua mensagem"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Enviar</button>
+          </form>
+
+          <div id="form-status" style="margin-top: 15px"></div>
+        </div>
       </section>
     </main>
 
-    <!-- Rodapé -->
     <footer class="footer">
-      <div class="container">
-        <p>Design por Gabriel Henrick | &copy; 2025 Gabriel Henrick. Todos os direitos reservados.</p>
+      <div class="container footer-content">
+        <div class="footer-info">
+          <p>Design por DesignDev Pro | &copy; 2025 Gabriel Henrick.</p>
+          <p>Todos os direitos reservados.</p>
+        </div>
+        <div class="footer-socials">
+          <a
+            href="https://www.linkedin.com/in/gabrielhenrick/"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://github.com/gabrhenrick"
+            target="_blank"
+            aria-label="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/gabrhenrick/"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
       </div>
     </footer>
 
-    <!-- Botão de rolagem para o topo -->
     <a id="scroll-to-top" class="visible"><i class="fas fa-arrow-up"></i></a>
-    <!-- Partículas de fundo -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <!-- Inicialização das Partículas -->
+
     <script src="scripts.js" defer></script>
   </body>
 </html>
